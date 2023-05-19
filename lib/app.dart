@@ -74,7 +74,9 @@ class MyAppState extends State<MaterialAppWidget> {
           providers: [
             BlocProvider<AuthBloc>(
               create: (BuildContext context) => AuthBloc(
-                  apiProvider: apiProvider, client: client, repositoryAuth: RepositoryAuth()),
+                  apiProvider: apiProvider,
+                  client: client,
+                  repositoryAuth: RepositoryAuth()),
             ),
           ],
           child: MultiValueListenableBuilder(
@@ -192,7 +194,8 @@ class MyAppState extends State<MaterialAppWidget> {
     if (PreferenceHelper.getString(PreferenceHelper.userLanguage) != null &&
         PreferenceHelper.getString(PreferenceHelper.userLanguage)!.isNotEmpty) {
       MaterialAppWidget.notifier.value =
-          PreferenceHelper.getString(PreferenceHelper.userLanguage) == APPStrings.languageEn
+          PreferenceHelper.getString(PreferenceHelper.userLanguage) ==
+                  APPStrings.languageEn
               ? const Locale(PreferenceHelper.userLanguage)
               : const Locale(APPStrings.languageAr);
     }

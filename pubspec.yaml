@@ -59,7 +59,7 @@ dependencies:
   # For Network check connectivity
   connectivity_plus: ^3.0.2
 
-  intl: ^0.17.0
+  intl:
   webview_flutter: ^4.0.1
 
   # For get mime Type
